@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/foodStreet-dao/foodStreet-dao.iml" filepath="$PROJECT_DIR$/foodStreet-dao/foodStreet-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foodStreet-entity/foodStreet-entity.iml" filepath="$PROJECT_DIR$/foodStreet-entity/foodStreet-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foodStreet-parent.iml" filepath="$PROJECT_DIR$/foodStreet-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foodStreet-service/foodStreet-service.iml" filepath="$PROJECT_DIR$/foodStreet-service/foodStreet-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foodStreet-web/foodStreet-web.iml" filepath="$PROJECT_DIR$/foodStreet-web/foodStreet-web.iml" />
+    </modules>
+  </component>
+</project>
