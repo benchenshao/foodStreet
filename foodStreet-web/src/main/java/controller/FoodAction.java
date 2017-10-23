@@ -73,7 +73,10 @@ public class FoodAction {
     Food food = new Food();
     FoodDao foodDao = new FoodDao();
 
-    //添加美食
+    /**
+     * @return
+     * 添加美食
+     */
     public String insertFood() {
         food.setName(name);
         food.setSite(site);
@@ -84,13 +87,19 @@ public class FoodAction {
         return "insertFood" ;
     }
 
-    //删除美食
+    /**
+     * @return
+     * 删除美食
+     */
     public String deleteFood() {
         foodDao.deleteFood(id);
         return "deleteFood";
     }
 
-    //修改美食
+    /**
+     * @return
+     * 修改美食
+     */
     public String updateFood() {
         food.setId(id);
         food.setName(name);
@@ -102,6 +111,10 @@ public class FoodAction {
         return "updateFood";
     }
 
+    /**
+     * @return
+     * 查询全部美食
+     */
     public String queryAllFood() {
         List<Food> list = foodDao.queryAllFood();
        // ValueStack vs =

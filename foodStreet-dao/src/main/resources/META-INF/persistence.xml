@@ -14,13 +14,13 @@
  		<class>entity.Food</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1433;databaseName=demo" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1433;databaseName=food_Street" />
             <property name="javax.persistence.jdbc.user" value="sa" />
             <property name="javax.persistence.jdbc.password" value="yyyj" />
 
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
-            <!--<property name="hibernate.hbm2ddl.auto" value="create" />-->
+            <property name="hibernate.hbm2ddl.auto" value="create" />
             
         </properties>
 
