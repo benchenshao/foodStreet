@@ -8,7 +8,7 @@ public class UserTest {
         User user = new User();
         user.setId(1);
         user.setUsername("pjj");
-        user.setPassword("123");
+        //user.setPassword("123456");
 
         System.out.println(user);
     }

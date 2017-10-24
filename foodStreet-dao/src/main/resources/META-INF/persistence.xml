@@ -12,6 +12,7 @@
     <persistence-unit name="jpa">
 		
  		<class>entity.Food</class>
+        <class>entity.User</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1433;databaseName=food_Street" />

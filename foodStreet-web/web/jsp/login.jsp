@@ -11,9 +11,9 @@
     <title>登录界面</title>
 </head>
 <body>
-    <form action="" method="post">
-        <input type="text" name="username"/>
-        <input type="text" name="password"/>
+    <form action="login.action" method="post">
+        请输入账号：<input type="text" name="username"/><br>
+        请输入密码：<input type="text" name="password"/><br>
         <input type="submit" value="登录"/>
     </form>
 </body>

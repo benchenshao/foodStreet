@@ -7,28 +7,22 @@ import java.io.File;
  * @author benchenshao
  */
 @Entity
-@Table(name = "USER")
+@Table(name = "USERS")
 public class User {
     private int id;
     private String username;
     private String password;
+    private String phone;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getUsername() {
@@ -39,12 +33,19 @@ public class User {
         this.username = username;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

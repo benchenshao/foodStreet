@@ -10,8 +10,9 @@
             <result></result>
             <allowed-methods></allowed-methods>
         </action>-->
-        <action name="upload" class="controller.UploadAction">
-            <result>/jsp/03.jsp</result>
+        <action name="upload*" method="{1}" class="controller.UploadAction">
+            <result>/jsp/register.jsp</result>
+            <result name="register">/jsp/success.jsp</result>
             <result name="input">/jsp/error.jsp</result>
             <!--配置拦截器限制上传文件类型及大小-->
             <interceptor-ref name="fileUpload">
@@ -19,6 +20,11 @@
                 <param name="maximumSize">2M</param>
             </interceptor-ref>
             <interceptor-ref name="defaultStack"></interceptor-ref>
+            <allowed-methods>register</allowed-methods>
+        </action>
+        <action name="login" class="controller.LoginAction">
+            <result name="success">/jsp/loginSuccess.jsp</result>
+            <result name="input">/jsp/loginError.jsp</result>
         </action>
         <action name="download" class="controller.DownloadAction">
             <param name="inputPath">/images/img2-lg.jpg</param>

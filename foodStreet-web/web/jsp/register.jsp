@@ -26,9 +26,16 @@
 
 <form action="upload.action" method="post" enctype="multipart/form-data">
     请选择图片：<input type="file" name="upload"><br>
+    <input type="submit" value="上传图片"/>${result}
+</form>
+
+<form action="uploadregister.action" method="post">
     请输入账号：<input type="text" name="username"/><br>
     请输入密码：<input type="text" name="password"/><br>
-    <input type="submit" value="注册">${result}
+    请输入手机号码：<input type="text" name="phone"/><br>
+    <%--请输入验证码：<input type="text" name="checkcode"/>
+    <img alt="checkcode" id="checkcodeimage" src=""/><br>--%>
+    <input type="submit" value="注册">
 </form>
 </body>
 </html>

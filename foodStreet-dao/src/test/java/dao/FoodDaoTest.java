@@ -6,14 +6,18 @@ import org.junit.Test;
 import java.util.List;
 
 public class FoodDaoTest {
-    /*@Test
+    @Test
     public void daoInsertTest() {
         FoodDao foodDao = new FoodDao();
         Food food = new Food();
-        food.setName("zaa");
+        food.setName("大闸蟹");
+        food.setPrice(20.00);
+        food.setSite("阳澄湖");
+        food.setTaste("微辣");
         foodDao.insertFood(food);
+        System.out.println(food);
     }
-    @Test
+    /*@Test
     public void daoDeleteTest() {
         FoodDao foodDao = new FoodDao();
         foodDao.deleteFood(1);
