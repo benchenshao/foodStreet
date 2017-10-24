@@ -10,46 +10,55 @@ import java.io.File;
 * @create 2017/10/23 11:22
 * @desc
 */
-/**
- * @author benchenshao
- */
+
 public class UploadAction extends ActionSupport {
-    private File picture;
-    private String username;
-    private String password;
+    private File upload;
+    private String uploadContentType;
+    private String uploadFileName;
+    private String result;
 
-    public File getPicture() {
-        return picture;
+    public File getUpload() {
+        return upload;
     }
 
-    public void setPicture(File picture) {
-        this.picture = picture;
+    public void setUpload(File upload) {
+        this.upload = upload;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUploadContentType() {
+        return uploadContentType;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUploadContentType(String uploadContentType) {
+        this.uploadContentType = uploadContentType;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUploadFileName() {
+        return uploadFileName;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUploadFileName(String uploadFileName) {
+        this.uploadFileName = uploadFileName;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
     }
 
     @Override
     public String execute() throws Exception {
-        String path = ServletActionContext.getServletContext().getRealPath("/images");
+        String path = ServletActionContext.getServletContext().getRealPath("D://files");
         File file = new File(path);
         if(!file.exists()){
             file.mkdir();
         }
-        FileUtils.copyFile(picture, new File(file,username));
+        FileUtils.copyFile(upload, new File(file,uploadFileName));
+        result="上传成功！";
         return SUCCESS;
     }
+
 }

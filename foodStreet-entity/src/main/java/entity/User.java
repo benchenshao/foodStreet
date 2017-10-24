@@ -10,7 +10,6 @@ import java.io.File;
 @Table(name = "USER")
 public class User {
     private int id;
-    private File picture;
     private String username;
     private String password;
 
@@ -22,14 +21,6 @@ public class User {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public File getPicture() {
-        return picture;
-    }
-
-    public void setPicture(File picture) {
-        this.picture = picture;
     }
 
     public String getPassword() {
@@ -52,10 +43,8 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", picture='" + picture + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
-
 }
