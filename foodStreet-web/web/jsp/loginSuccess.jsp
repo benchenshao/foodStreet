@@ -13,6 +13,7 @@ success.jsp<%--
 </head>
 <body>
     <h2>登录成功！</h2>
+    <a href="login.jsp">返回登录页面</a>
     <img src="../images/register.jpg" height="330" width="640"/>
 </body>
 </html>

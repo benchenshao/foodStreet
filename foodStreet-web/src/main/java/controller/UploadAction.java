@@ -1,6 +1,8 @@
 package controller;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.util.ValueStack;
 import dao.UserDao;
 import entity.User;
 import org.apache.commons.io.FileUtils;
@@ -22,6 +24,7 @@ public class UploadAction extends ActionSupport {
 
     private String username;
     private String password;
+    private String paasword1;
     private String phone;
 
     public File getUpload() {
@@ -72,6 +75,14 @@ public class UploadAction extends ActionSupport {
         this.password = password;
     }
 
+    public String getPaasword1() {
+        return paasword1;
+    }
+
+    public void setPaasword1(String paasword1) {
+        this.paasword1 = paasword1;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -97,10 +108,12 @@ public class UploadAction extends ActionSupport {
 
     public String register() {
         System.out.println("---register---");
+
         user.setUsername(username);
         user.setPassword(password);
         user.setPassword(phone);
-
+        ValueStack vs = ActionContext.getContext().getValueStack();
+        vs.set("username",username);
         userService.register(user);
 
         return "register";
